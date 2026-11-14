@@ -1,0 +1,23 @@
+{
+  "name": "geo3d-modeler",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "浏览器端三维地层建模工具 (WebGL2 + TypeScript)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "smoke": "tsx scripts/smoke.ts"
+  },
+  "dependencies": {
+    "three": "^0.160.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.160.0",
+    "playwright-core": "^1.65.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
+  }
+}

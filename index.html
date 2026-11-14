@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>三维地层建模工具</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="sidebar">
+      <div id="sidebar-header">
+        <h1>三维地层建模</h1>
+        <div id="tab-bar">
+          <button class="tab-btn active" data-tab="borehole">钻孔管理</button>
+          <button class="tab-btn" data-tab="params">模型参数</button>
+          <button class="tab-btn" data-tab="section">剖面</button>
+          <button class="tab-btn" data-tab="io">数据/导出</button>
+        </div>
+      </div>
+      <div id="panel-borehole" class="panel active"></div>
+      <div id="panel-params" class="panel"></div>
+      <div id="panel-section" class="panel"></div>
+      <div id="panel-io" class="panel"></div>
+      <div id="statusbar"></div>
+    </div>
+    <div id="viewport">
+      <canvas id="gl"></canvas>
+      <canvas id="map-overlay" class="hidden"></canvas>
+      <div id="legend" class="overlay-box"></div>
+      <div id="scalebar" class="overlay-box"><div id="scalebar-line"></div><div id="scalebar-label"></div></div>
+      <div id="fps-meter" class="overlay-box"></div>
+      <div id="view-toolbar" class="overlay-box"></div>
+    </div>
+    <div id="section-dock" class="hidden">
+      <div id="section-dock-bar">
+        <span id="section-dock-title">剖面</span>
+        <span class="spacer"></span>
+        <button id="btn-section-png">导出 PNG</button>
+        <button id="btn-section-close">关闭</button>
+      </div>
+      <canvas id="section-canvas"></canvas>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
